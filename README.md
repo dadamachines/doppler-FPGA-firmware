@@ -41,10 +41,4 @@ docker run -it -v $MOUNTPOINT:/PRJ riscv  bash
 export PATH=/opt/riscv32i/bin:$PATH
 ```
 
-or use a image from https://hub.docker.com/r/zmors/riscv_gcc/
-```
-export MOUNTPOINT=`pwd`
-docker run -it -v $MOUNTPOINT:/PRJ zmors/riscv_gcc  bash
-export PATH=/opt/riscv32i/bin:$PATH
-```
 
