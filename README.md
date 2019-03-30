@@ -2,7 +2,12 @@
 
 
 ## build
-the icestorm toolchain can be easy build with docker.
+The icestorm toolchain can be easy build with docker.
+Docker its like a virtual machine.
+The image contains a little linux with complete toolchain to
+generate a bitstream for ice40 fpgas from verilog src code and also a arm compiler.
+The bitstream will generate as binary and c header to 
+include this in arduino/samd51 part.
 
 ```
 git clone https://github.com/noscene/Doppler_FPGA_Firmware
@@ -28,17 +33,17 @@ as header doppler_simple_io.h
 
 
 ## build with risc-v support
-
+This docker file contains the icestorm part and a compiler
+for risc v when you want running a riscv mcu on the fpga.
 ```
 git clone https://github.com/noscene/Doppler_FPGA_Firmware
 cd Doppler_FPGA_Firmware
 # this part need some times
-docker build -t riscv  riscv/
+docker build -t riscv  riscV/
 
 #
 export MOUNTPOINT=`pwd`
 docker run -it -v $MOUNTPOINT:/PRJ riscv  bash
-export PATH=/opt/riscv32i/bin:$PATH
 ```
 
 

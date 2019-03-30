@@ -1,0 +1,53 @@
+# Composer Pin Mapping to FPGA
+
+set_io encoderA		12
+set_io encoderB		13
+set_io encoderBtn	11
+
+set_io ws2812		 10
+
+#matrix 12x18
+# Outputs
+set_io row[0]			21
+set_io row[1]			20
+set_io row[2]			19
+set_io row[3]			18
+set_io row[4]			9
+set_io row[5]			6
+set_io row[6]			4
+set_io row[7]			3
+set_io row[8]			2
+set_io row[9] 		48
+set_io row[10]		47
+set_io row[11]	  46
+
+#extra part
+set_io row1x16	23
+
+# inputs PullUp
+set_io col[0]			25
+set_io col[1]			26
+set_io col[2]			27
+set_io col[3]			28
+set_io col[4]			31
+set_io col[5]			32
+set_io col[6]			34
+set_io col[7]			35
+set_io col[8]			36
+set_io col[9]			37
+set_io col[10]		38
+set_io col[11]		39
+set_io col[12]		40
+set_io col[13]		41
+set_io col[14]		42
+set_io col[15]		43
+set_io col[16]		44
+set_io col[17]		45
+
+# program and spi (sercom5)
+set_io cfg_so			14		#		PB02 sercom:  n.a/5.0	arduino pin: 23
+set_io cfg_sck		15		#		PB03 sercom:  n.a/5.1	arduino pin: 21
+set_io cfg_cs			16		#		PB22 sercom:  1.2/5.2	arduino pin: 24
+set_io cfg_si 		17		#		PB23 sercom:  1.3/5.3	arduino pin: 22
+set_io cfg_done   25		# cdone pa16 arduino pin: 25
+# reset  pa17 arduino pin: 26
